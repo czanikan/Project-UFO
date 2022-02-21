@@ -61,7 +61,8 @@ public class HoverController : MonoBehaviour
 
     private float HooksLawDampen(float hitDistance)
     {
-        float forceAmount = strength * (rayLength - hitDistance) + (dampening * (lastHitDistance - hitDistance));
+        float forceAmount = strength * rb.mass * (rayLength - hitDistance) + 
+            (dampening * rb.mass * (lastHitDistance - hitDistance));
         forceAmount = Mathf.Max(0f, forceAmount);
         lastHitDistance = hitDistance;
 
