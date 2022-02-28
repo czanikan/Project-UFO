@@ -13,19 +13,23 @@ public class HoverController : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
 
     [Header("Movement Stats")]
-    [SerializeField] private float speed;
+    [SerializeField] private float maxSpeed;
+    private float curSpeed;
+    [SerializeField] private float acceleration;
+    [SerializeField] private float deceleration;
     [SerializeField] private float rotSpeed;
-    private Vector3 moveInput;
 
     private float lastHitDistance;
     private float speedTarget, rotateTarget;
-    [SerializeField] private Vector3 offset;
+    private Vector3 offset;
+    private Vector3 moveInput;
 
     private Rigidbody rb;
 
 
     private void Start()
     {
+        offset = new Vector3(0, 90, 0);
         rb = GetComponent<Rigidbody>();
     }
 
@@ -36,8 +40,32 @@ public class HoverController : MonoBehaviour
 
         moveInput = new Vector3(h, 0, v);
 
-        speedTarget = Mathf.SmoothStep(speedTarget, speed, Time.deltaTime * 12f);
-        rotateTarget = Mathf.Lerp(rotateTarget, rotSpeed, Time.deltaTime * 4f);
+        if(moveInput != Vector3.zero)
+        {
+            if(curSpeed < maxSpeed)
+            {
+                curSpeed = curSpeed + acceleration * Time.deltaTime;
+            }
+        }
+        else
+        {
+            if(curSpeed > 0)
+            {
+                curSpeed = curSpeed - deceleration * Time.deltaTime;
+            }
+        }
+        Debug.Log(curSpeed);
+
+        /*
+        if(Input.GetButton("Jump"))
+        {
+            curSpeed = maxSpeed / 2;
+        }
+        else
+        {
+            curSpeed = maxSpeed;
+        }
+        */
 
         body.localRotation = Quaternion.Slerp(body.localRotation, Quaternion.Euler((moveInput + offset) * rotSpeed), Time.deltaTime * 4.0f);
     }
@@ -57,8 +85,8 @@ public class HoverController : MonoBehaviour
             lastHitDistance = rayLength * 1.1f;
         }
 
-        rb.MovePosition(rb.position + moveInput * Time.deltaTime * speed);
-        //rb.velocity = moveInput * speed * Time.deltaTime;
+        rb.MovePosition(rb.position + moveInput * Time.deltaTime * curSpeed);
+        //rb.velocity = moveInput * maxSpeed * Time.deltaTime;
     }
 
     private float HooksLawDampen(float hitDistance)
