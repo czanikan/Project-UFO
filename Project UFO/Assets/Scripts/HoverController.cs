@@ -40,11 +40,17 @@ public class HoverController : MonoBehaviour
 
         moveInput = new Vector3(h, 0, v);
 
+        float curMaxSpeed = Input.GetButton("Jump") ? maxSpeed / 2 : maxSpeed;
+
         if(moveInput != Vector3.zero)
         {
-            if(curSpeed < maxSpeed)
+            if(curSpeed < curMaxSpeed)
             {
                 curSpeed = curSpeed + acceleration * Time.deltaTime;
+            }
+            else
+            {
+                curSpeed = curSpeed - deceleration * Time.deltaTime;
             }
         }
         else
@@ -55,17 +61,6 @@ public class HoverController : MonoBehaviour
             }
         }
         Debug.Log(curSpeed);
-
-        /*
-        if(Input.GetButton("Jump"))
-        {
-            curSpeed = maxSpeed / 2;
-        }
-        else
-        {
-            curSpeed = maxSpeed;
-        }
-        */
 
         body.localRotation = Quaternion.Slerp(body.localRotation, Quaternion.Euler((moveInput + offset) * rotSpeed), Time.deltaTime * 4.0f);
     }
