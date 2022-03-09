@@ -15,7 +15,12 @@ public class ButtonInteraction : MonoBehaviour
     {
         switch (interactable.interactionType)
         {
+            case Interactable.InteractionType.Activate:
 
+                break;
+
+            default:
+                throw new System.Exception("Unsupported type of interactable.");
         }
     }
 }
