@@ -11,6 +11,7 @@ public abstract class Interactable : MonoBehaviour
     public InteractionType interactionType;
 
     public abstract void interaction();
+    public abstract void turnOnOff(bool state);
 
 
 }

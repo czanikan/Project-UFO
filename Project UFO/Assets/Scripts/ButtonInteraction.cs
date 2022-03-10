@@ -8,7 +8,14 @@ public class ButtonInteraction : MonoBehaviour
 
     private void OnCollisionStay(Collision col)
     {
-        HandleInteraction(interactableTarget.GetComponent<Interactable>());
+        //HandleInteraction(interactableTarget.GetComponent<Interactable>());
+        interactableTarget.GetComponent<Interactable>().turnOnOff(true);
+    }
+
+    private void OnCollisionExit(Collision col)
+    {
+        //HandleInteraction(interactableTarget.GetComponent<Interactable>());
+        interactableTarget.GetComponent<Interactable>().turnOnOff(false);
     }
 
     void HandleInteraction(Interactable interactable)
@@ -16,7 +23,7 @@ public class ButtonInteraction : MonoBehaviour
         switch (interactable.interactionType)
         {
             case Interactable.InteractionType.Activate:
-
+                interactable.interaction();
                 break;
 
             default:
