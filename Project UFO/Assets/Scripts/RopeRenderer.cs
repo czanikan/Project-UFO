@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RopeRenderer : MonoBehaviour
 {
-    [SerializeField] private Transform[] points;
+    [SerializeField] private List<Transform> points;
     [SerializeField] private lr_LineController line;
 
     private void Start()

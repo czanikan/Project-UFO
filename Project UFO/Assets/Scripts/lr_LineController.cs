@@ -5,22 +5,22 @@ using UnityEngine;
 public class lr_LineController : MonoBehaviour
 {
     private LineRenderer lr;
-    private Transform[] points;
+    private List<Transform> points;
 
     private void Awake()
     {
         lr = GetComponent<LineRenderer>();
     }
 
-    public void SetUpLine(Transform[] points)
+    public void SetUpLine(List<Transform> points)
     {
-        lr.positionCount = points.Length;
+        lr.positionCount = points.Count;
         this.points = points;
     }
 
     private void Update()
     {
-        for (int i = 0; i < points.Length; i++) {
+        for (int i = 0; i < points.Count; i++) {
             lr.SetPosition(i, points[i].position);
         }
     }
