@@ -13,24 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Keys:
-  - __PanelContainer__rootVisualContainer__7190ccc1a2199de409af62f26a37e1d3__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
-  - __PanelContainer__rootVisualContainer__7190ccc1a2199de409af62f26a37e1d3__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
-  - __PanelContainer__rootVisualContainer__92ff74a38990ec94b83a7cb687cba260__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
-  - __PanelContainer__rootVisualContainer__92ff74a38990ec94b83a7cb687cba260__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
-  - __PanelContainer__rootVisualContainer__bed7b7045bfb0124f868e31fa4e4ab6e__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
-  - __PanelContainer__rootVisualContainer__bed7b7045bfb0124f868e31fa4e4ab6e__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
-  - __PanelContainer__rootVisualContainer__4a148298beef59344b4ae75fb35b2fa8__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
-  - __PanelContainer__rootVisualContainer__4a148298beef59344b4ae75fb35b2fa8__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
   - __PanelContainer__rootVisualContainer__77ca42a8d19d31c438f6c9ea3fc20a36__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
   - __PanelContainer__rootVisualContainer__77ca42a8d19d31c438f6c9ea3fc20a36__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
   m_Values:
-  - '{}'
-  - '{}'
-  - '{}'
-  - '{}'
-  - '{}'
-  - '{}'
-  - '{}'
-  - '{}'
-  - '{"position":{"x":889.0,"y":-41.999996185302737,"z":0.0},"scale":{"x":0.7561436891555786,"y":0.7561436891555786,"z":1.0}}'
-  - '{"m_Version":31,"m_SelectedElementsArray":[]}'
+  - '{"position":{"x":694.0,"y":819.0,"z":0.0},"scale":{"x":0.7561436891555786,"y":0.7561436891555786,"z":1.0}}'
+  - '{"m_Version":23,"m_SelectedElementsArray":[]}'
