@@ -48,11 +48,17 @@ public class Laser_Renderer : MonoBehaviour
     {
         yield return new WaitForSeconds(freq);
         float original_y = transform.position.y;
+        int iteration = 0;
         foreach (Transform node in points)
         {
-            node.position = new Vector3(node.position.x,
+            iteration++;
+            if (1 < iteration && iteration < points.Count)
+            {
+                node.position = new Vector3(node.position.x,
                 Mathf.Lerp(node.position.y, original_y + Random.Range(-osc, osc), freq),
                 node.position.z);
+            }
+            
         }
         //transform.position = new Vector3(transform.position.x, original_y, transform.position.z);
     }
