@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class LaserHit : MonoBehaviour
 {
-    public float magnitude = 2500;
-    public GameObject hitEffect;
+    [SerializeField] float magnitude = 2500;
+
+    [SerializeField] GameObject hitEffect;
+    
+    private AudioSource hitSFX;
+
+    private void Start()
+    {
+        hitSFX = GetComponent<AudioSource>();   
+    }
 
     private void OnCollisionEnter(Collision col)
     {
@@ -18,6 +26,7 @@ public class LaserHit : MonoBehaviour
 
             force.Normalize();
 
+            hitSFX.Play();
             Instantiate(hitEffect, transform.position, Quaternion.identity);
 
             rb.AddForce(-force * magnitude, ForceMode.Impulse);
