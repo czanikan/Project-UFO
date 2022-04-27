@@ -5,6 +5,17 @@ using UnityEngine;
 public class ButtonInteractionTurrets : MonoBehaviour
 {
     [SerializeField] GameObject[] interactableTurrets;
+    Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        anim.SetBool("isOn", true);
+    }
 
     private void OnCollisionStay(Collision col)
     {
@@ -12,6 +23,7 @@ public class ButtonInteractionTurrets : MonoBehaviour
         {
             turret.GetComponent<Interactable>().turnOnOff(true);
         }
+        anim.SetBool("isOn", true);
     }
 
     private void OnCollisionExit(Collision col)
@@ -20,6 +32,7 @@ public class ButtonInteractionTurrets : MonoBehaviour
         {
             turret.GetComponent<Interactable>().turnOnOff(false);
         }
+        anim.SetBool("isOn", false);
     }
 
     void HandleInteraction(Interactable interactable)

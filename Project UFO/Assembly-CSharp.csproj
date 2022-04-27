@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Turret.cs" />
+    <Compile Include="Assets\Scripts\LaserGateInteraction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plug-Ins\TextMesh Pro\Shaders\TMPro.cginc" />

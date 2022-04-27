@@ -5,18 +5,25 @@ using UnityEngine;
 public class ButtonInteraction : MonoBehaviour
 {
     [SerializeField] GameObject interactableTarget;
+    Animator anim;
 
-    private void OnCollisionStay(Collision col)
+    private void Start()
     {
-        //HandleInteraction(interactableTarget.GetComponent<Interactable>());
+        anim = GetComponent<Animator>();
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
         interactableTarget.GetComponent<Interactable>().turnOnOff(true);
+        anim.SetBool("isOn", true);
     }
 
-    private void OnCollisionExit(Collision col)
+    private void OnTriggerExit(Collider other)
     {
-        //HandleInteraction(interactableTarget.GetComponent<Interactable>());
         interactableTarget.GetComponent<Interactable>().turnOnOff(false);
+        anim.SetBool("isOn", false);
     }
+    
 
     void HandleInteraction(Interactable interactable)
     {
