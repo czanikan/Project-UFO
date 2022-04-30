@@ -7,6 +7,7 @@ public class Turret : Interactable
     private Transform player;
     private Animator anim;
     private bool isOn;
+    [SerializeField] private bool isOnAtStart;
 
     [SerializeField] Transform head;
     [SerializeField] Transform shotPoint;
@@ -23,7 +24,7 @@ public class Turret : Interactable
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        isOn = true;
+        isOn = isOnAtStart;
         timeBetweenShoot = startTimeBetweenShoot;
 
         anim = GetComponent<Animator>();

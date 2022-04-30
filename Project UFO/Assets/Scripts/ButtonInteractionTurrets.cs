@@ -17,7 +17,7 @@ public class ButtonInteractionTurrets : MonoBehaviour
         anim.SetBool("isOn", true);
     }
 
-    private void OnCollisionStay(Collision col)
+    private void OnTriggerStay(Collider col)
     {
         foreach(GameObject turret in interactableTurrets)
         {
@@ -26,7 +26,7 @@ public class ButtonInteractionTurrets : MonoBehaviour
         anim.SetBool("isOn", true);
     }
 
-    private void OnCollisionExit(Collision col)
+    private void OnTriggerExit(Collider col)
     {
         foreach (GameObject turret in interactableTurrets)
         {
