@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Plug-Ins\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Scripts\lr_LineController.cs" />
+    <Compile Include="Assets\Scripts\Elevator.cs" />
     <Compile Include="Assets\Scripts\ButtonInteraction.cs" />
     <Compile Include="Assets\Scripts\Laser_Renderer.cs" />
     <Compile Include="Assets\Scripts\ButtonInteractionTurrets.cs" />
@@ -70,7 +71,8 @@
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Turret.cs" />
-    <Compile Include="Assets\Scripts\Elevator.cs" />
+    <Compile Include="Assets\Scripts\EndMenuManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plug-Ins\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -83,6 +85,7 @@
     <None Include="Assets\Plug-Ins\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Plug-Ins\QuickOutline\Resources\Shaders\OutlineMask.shader" />
     <None Include="Assets\Plug-Ins\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Plug-Ins\Real Stars Skybox\Demo Scene\Documentation.txt" />
     <None Include="Assets\Plug-Ins\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Plug-Ins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Plug-Ins\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
