@@ -5,5 +5,5 @@ Little game where the main goal is to find the exit with a tiny UFO. This game w
 It's only contains 2 levels. 
 In the first one you need to go to the elevator but an electric gate stands in the way. You need to find a way to turn off the gate.
 
-![(https://media3.giphy.com/media/PLttPBIaQiRXnTKXqX/giphy.gif)](<img src="https://media.giphy.com/media/PLttPBIaQiRXnTKXqX/giphy-downsized-large.gif" width="720" height="480" />)
+![Alt text](https://media.giphy.com/media/PLttPBIaQiRXnTKXqX/giphy-downsized-large.gif)
 
