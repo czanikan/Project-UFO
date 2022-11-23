@@ -7,5 +7,3 @@ In the first one you need to go to the elevator but an electric gate stands in t
 
 ![Alt text](https://media.giphy.com/media/PLttPBIaQiRXnTKXqX/giphy-downsized-large.gif)
 
-gif?
-
