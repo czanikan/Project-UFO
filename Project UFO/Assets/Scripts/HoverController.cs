@@ -60,7 +60,6 @@ public class HoverController : MonoBehaviour
                 curSpeed = curSpeed - deceleration * Time.deltaTime;
             }
         }
-        Debug.Log(curSpeed);
 
         body.localRotation = Quaternion.Slerp(body.localRotation, Quaternion.Euler((moveInput + offset) * rotSpeed), Time.deltaTime * 4.0f);
     }
