@@ -7,12 +7,17 @@ In the first one you need to go to the elevator but an electric gate stands in t
 
 ![First level gif](https://github.com/czanikan/Project-UFO/blob/master/gifs/Level1Cropped.gif)
 
-This is a realtime, puzzle game with top-down view. The main idea was inspired by classic puzzle games like *Portal* and *Talos Principles*.
+This is a real time, puzzle game with top-down perspective. The main idea was highly inspired by classic puzzle games like *Portal 2* and *The Talos Principle*. The UFO's movement is phyisics based. The hovering mechanics use a rigidbody with simple force to keep the machine in the air.
+
 
 ## The Story
 
 You are driving a little UFO and you have been captured in area 51. You are at the lower level in the underground base. You need to find the exit to leave this planet. Every level in the game is a floot in the  millitary base. To finish a level you need to find the way to the elevaotr.
 
+´rb.AddForceAtPosition(transform.up * forceAmount, transform.position);´
+
+The *forceAmount* calculated by the mass of the body, the distance from the ground, the disctance in the last update and a little bit of damping:
+´float forceAmount = strength * rb.mass * (rayLength - hitDistance) + (dampening * rb.mass * (lastHitDistance - hitDistance));´
 
 # Hi, I'm Andy! 👋
 
