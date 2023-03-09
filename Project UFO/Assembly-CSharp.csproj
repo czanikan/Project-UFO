@@ -59,24 +59,24 @@
     <Compile Include="Assets\Plug-Ins\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Scripts\lr_LineController.cs" />
     <Compile Include="Assets\Scripts\Elevator.cs" />
-    <Compile Include="Assets\Scripts\ButtonInteraction.cs" />
+    <Compile Include="Assets\Scripts\Interaction\ButtonInteraction.cs" />
     <Compile Include="Assets\Scripts\Laser_Renderer.cs" />
-    <Compile Include="Assets\Scripts\ButtonInteractionTurrets.cs" />
-    <Compile Include="Assets\Scripts\PauseManager.cs" />
+    <Compile Include="Assets\Scripts\Interaction\ButtonInteractionTurrets.cs" />
+    <Compile Include="Assets\Scripts\Menus\PauseManager.cs" />
     <Compile Include="Assets\Scripts\ObjectPickUp.cs" />
-    <Compile Include="Assets\Scripts\Door.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Door.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\HoverController.cs" />
     <Compile Include="Assets\Scripts\LaserHit.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
-    <Compile Include="Assets\Scripts\EndMenuManager.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Turret.cs" />
+    <Compile Include="Assets\Scripts\Menus\EndMenuManager.cs" />
     <Compile Include="Assets\Scripts\RopeRenderer.cs" />
-    <Compile Include="Assets\Scripts\LaserGateInteraction.cs" />
+    <Compile Include="Assets\Scripts\Interaction\LaserGateInteraction.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\PortalManager.cs" />
-    <Compile Include="Assets\Scripts\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Interactable.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Turret.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plug-Ins\TextMesh Pro\Shaders\TMPro.cginc" />
