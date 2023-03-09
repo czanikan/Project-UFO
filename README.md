@@ -2,10 +2,12 @@
  
 Little game where the main goal is to find the exit with a tiny UFO. This game was made in Unity for a univeristy class. 
 
-It's only contains 2 levels. 
+The original version for the class only contained 2 levels. 
 In the first one you need to go to the elevator but an electric gate stands in the way. You need to find a way to turn off the gate.
 
-![Alt text](https://github.com/czanikan/Project-UFO/blob/master/gifs/Level1Cropped.gif)
+![First level gif](https://github.com/czanikan/Project-UFO/blob/master/gifs/Level1Cropped.gif)
+
+This is a realtime, puzzle game with top-down view. The main idea was inspired by classic puzzle games like *Portal* and *Talos Principles*.
 
 ## The Story
 
