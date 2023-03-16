@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plug-Ins\QuickOutline\Scripts\Outline.cs" />
+    <Compile Include="Assets\Scripts\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\lr_LineController.cs" />
     <Compile Include="Assets\Scripts\Elevator.cs" />
     <Compile Include="Assets\Scripts\Interaction\ButtonInteraction.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\PortalManager.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactable.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\MenuItems.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plug-Ins\TextMesh Pro\Shaders\TMPro.cginc" />

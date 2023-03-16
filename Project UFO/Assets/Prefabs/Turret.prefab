@@ -382,7 +382,7 @@ MonoBehaviour:
   isOnAtStart: 0
   head: {fileID: 7585430304812776070}
   shotPoint: {fileID: 3864126305840590966}
-  attackDist: 10
+  attackDist: 25
   damping: 2
   startTimeBetweenShoot: 2
   bulletPrefab: {fileID: 6672091924372935435, guid: 8f1a1738eb89e8f4b8240ae71138c4ea, type: 3}

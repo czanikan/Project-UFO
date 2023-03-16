@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3091833051493363712}
   - component: {fileID: 3091833051493363713}
-  - component: {fileID: 3091833051493363727}
   - component: {fileID: 3091833051493363715}
   - component: {fileID: 3091833051493363726}
   - component: {fileID: 2502382878380218945}
+  - component: {fileID: 1381473763}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: -0.022957042, y: 0.97606146, z: -0.17338957, w: -0.12927918}
   m_LocalPosition: {x: 0.41, y: 4.74, z: 7.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,14 +79,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3091833051493363727
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3091833051493363724}
-  m_Enabled: 1
 --- !u!114 &3091833051493363715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +101,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 1
   m_AntialiasingQuality: 2
@@ -142,10 +136,10 @@ AudioSource:
   m_GameObject: {fileID: 3091833051493363724}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3497593712329691041, guid: c31a61cb2e760194fa40e711685efaf1, type: 2}
   m_audioClip: {fileID: 8300000, guid: e99537fb51e6b254d988206321cf48ec, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -229,3 +223,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &1381473763
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3091833051493363724}
+  m_Enabled: 1

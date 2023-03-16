@@ -376,6 +376,8 @@
 "Assets/Scripts/LaserHit.cs"
 "Assets/Scripts/Laser_Renderer.cs"
 "Assets/Scripts/lr_LineController.cs"
+"Assets/Scripts/MainMenuManager.cs"
+"Assets/Scripts/MenuItems.cs"
 "Assets/Scripts/Menus/EndMenuManager.cs"
 "Assets/Scripts/Menus/PauseManager.cs"
 "Assets/Scripts/ObjectPickUp.cs"

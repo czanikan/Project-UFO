@@ -13,6 +13,8 @@ public class HoverController : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
 
     [Header("Movement Stats")]
+
+    public bool isControllable;
     [SerializeField] private float maxSpeed;
     private float curSpeed;
     [SerializeField] private float acceleration;
@@ -31,37 +33,41 @@ public class HoverController : MonoBehaviour
     {
         offset = new Vector3(0, 90, 0);
         rb = GetComponent<Rigidbody>();
+        isControllable = true;
     }
 
     private void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        moveInput = new Vector3(h, 0, v);
-
-        float curMaxSpeed = Input.GetButton("Jump") ? maxSpeed / 2 : maxSpeed;
-
-        if(moveInput != Vector3.zero)
+        if (isControllable)
         {
-            if(curSpeed < curMaxSpeed)
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
+
+            moveInput = new Vector3(h, 0, v);
+
+            float curMaxSpeed = Input.GetButton("Jump") ? maxSpeed / 2 : maxSpeed;
+
+            if (moveInput != Vector3.zero)
             {
-                curSpeed = curSpeed + acceleration * Time.deltaTime;
+                if (curSpeed < curMaxSpeed)
+                {
+                    curSpeed = curSpeed + acceleration * Time.deltaTime;
+                }
+                else
+                {
+                    curSpeed = curSpeed - deceleration * Time.deltaTime;
+                }
             }
             else
             {
-                curSpeed = curSpeed - deceleration * Time.deltaTime;
+                if (curSpeed > 0)
+                {
+                    curSpeed = curSpeed - deceleration * Time.deltaTime;
+                }
             }
-        }
-        else
-        {
-            if(curSpeed > 0)
-            {
-                curSpeed = curSpeed - deceleration * Time.deltaTime;
-            }
-        }
 
-        body.localRotation = Quaternion.Slerp(body.localRotation, Quaternion.Euler((moveInput + offset) * rotSpeed), Time.deltaTime * 4.0f);
+            body.localRotation = Quaternion.Slerp(body.localRotation, Quaternion.Euler((moveInput + offset) * rotSpeed), Time.deltaTime * 4.0f);
+        }
     }
 
     private void FixedUpdate()

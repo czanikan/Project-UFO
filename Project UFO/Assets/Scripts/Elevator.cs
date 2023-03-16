@@ -8,7 +8,7 @@ public class Elevator : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject fadePanel;
 
-    private void Start()
+    private void Awake()
     {
         anim = GetComponent<Animator>();
         fadePanel = GameObject.Find("FadePanel");
