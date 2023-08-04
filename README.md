@@ -5,7 +5,7 @@ Little game where the main goal is to find the exit with a tiny UFO. This game w
 The original version for the class only contained 2 levels. 
 In the first one you need to go to the elevator but an electric gate stands in the way. You need to find a way to turn off the gate.
 
-![Showcase gif](https://github.com/czanikan/Project_AI_Football/blob/main/media/FutBot.gif)
+![Showcase gif](https://github.com/czanikan/Project-UFO/blob/master/gifs/Level1Cropped.gif)
 
 This is a real time, puzzle game with top-down perspective. The main idea was highly inspired by classic puzzle games like *Portal 2* and *The Talos Principle*. The UFO's movement is phyisics based. The hovering mechanics use a rigidbody with simple force to keep the machine in the air.
 
