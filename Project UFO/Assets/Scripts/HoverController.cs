@@ -49,14 +49,8 @@ public class HoverController : MonoBehaviour
 
             if (moveInput != Vector3.zero)
             {
-                if (curSpeed < curMaxSpeed)
-                {
-                    curSpeed = curSpeed + acceleration * Time.deltaTime;
-                }
-                else
-                {
-                    curSpeed = curSpeed - deceleration * Time.deltaTime;
-                }
+                curSpeed = curSpeed < curMaxSpeed ? 
+                    curSpeed + acceleration * Time.deltaTime : curSpeed - deceleration * Time.deltaTime;
             }
             else
             {
